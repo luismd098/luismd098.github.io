@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
+    <audio id="bg-music" autoplay loop>
+        <source src="song1.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
     <style>
         body,
         html {
@@ -24,7 +28,8 @@
             top: 0;
             left: 0;
             max-width: 500px;
-            width: 50%; /* Ajusta según tamaño real */
+            width: 50%;
+            /* Ajusta según tamaño real */
             height: auto;
             object-fit: contain;
             z-index: -1;
@@ -37,7 +42,8 @@
             bottom: 0;
             right: 0;
             max-width: 500px;
-            width: 50%; /* Ajusta según tamaño real */
+            width: 50%;
+            /* Ajusta según tamaño real */
             height: auto;
             object-fit: contain;
             z-index: -1;
@@ -178,6 +184,18 @@
         .invitation h3 {
             font-weight: normal;
             font-size: medium;
+            color: #8dc9a9;
+        }
+
+        .invitation .subtitle {
+            font-weight: normal;
+            font-size: medium;
+            color: #cccccc;
+        }
+
+        .invitation .subtitle2 {
+            font-weight: normal;
+            font-size: medium;
             color: #84A379;
         }
 
@@ -312,27 +330,33 @@
         <div class="invitation" id="invitation">
 
             <div class="header">
+                <h3 class="header-title">NUESTRA BODA POR EL CIVIL</h3>
                 <img src="magnolia.webp" alt="Magnolia" class="magnolia">
-                <h3 class="header-title">CELEBREMOS EL AMOR DE...</h3>
             </div>
+            <h3 class="subtitle">Te invitamos a celebrar nuestro amor y compromiso civil. Tu presencia será muy
+                importante para este día especial</h3>
             <h1 class="names">Karen <br> & <br> Luis</h1>
             <div class="date-time">
-                <div>Sábado<br>01:00pm</div>
+                <div>Sábado<br>03:00pm</div>
                 <div class="divider"></div>
                 <div class="day">
                     <img src="circulo.webp" alt="Círculo" class="circulo">
-                    <div class="day-label">13</div>
+                    <div class="day-label">30</div>
                 </div>
                 <div class="divider"></div>
-                <div>Septiembre<br>2025</div>
+                <div>Agosto<br>2025</div>
             </div>
             <hr class="dashed">
             <div class="details">
-                <a href="https://www.google.com.mx/maps/place/Hda.+S.+Mateo+82,+Impulsora+Popular+Avicola,+57130+Cdad.+Nezahualc%C3%B3yotl,+M%C3%A9x./@19.4803277,-99.0482077,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1fb1cb6957653:0xee316eafa1fdf5d8!8m2!3d19.4803277!4d-99.0456328!16s%2Fg%2F11c5lh_v0k?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
+                <a href="https://www.google.com.mx/maps/place/Hda.+S.+Mateo+98,+Impulsora+Popular+Avicola,+57130+Cdad.+Nezahualc%C3%B3yotl,+M%C3%A9x./@19.4808701,-99.0480551,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1fb1cc9f8af05:0x2425646619e5bb16!8m2!3d19.4808701!4d-99.0454802!16s%2Fg%2F11c4x4llyc?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank" class="location-link">
-                    Hda. San Mateo #82, Impulsora, Ciudad Nezahualcóyotl, México.
+                    (Salon Red) Hda. S. Mateo 98, Impulsora Popular Avicola, 57130 Cdad. Nezahualcóyotl, Méx.
                     <img src="mapa.png" alt="Ubicación" class="icon-location">
                 </a>
+            </div>
+            <hr class="dashed">
+            <div class="bottom">
+                <h3 class="subtitle2">¡Estamos emocionados de compartir este día tan especial contigo!</h3>
             </div>
         </div>
     </div>
