@@ -5,10 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
-    <audio id="bg-music" autoplay loop>
-        <source src="song1.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-    </audio>
     <style>
         body,
         html {
@@ -18,8 +14,13 @@
             margin: 0;
             padding: 0;
             font-family: 'Georgia', serif;
+            /* height: 100%; */
+            /* overflow: hidden; */
+
             height: 100%;
-            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
         }
 
 
@@ -70,15 +71,21 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            height: 90vh;
+            /* 90% de la altura de la ventana */
+            overflow-y: auto;
         }
 
         .splash,
         .invitation {
             display: none;
+            margin: 2rem 20px;
+            /* max-height: 100vh; */
             background-color: rgba(255, 255, 255, 0.85);
             border-radius: 20px;
             padding: 2rem;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            /* overflow-y: auto; */
         }
 
         .splash h1 {
@@ -316,6 +323,21 @@
     </style>
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Espera 2 s y luego ejecuta el scroll
+        setTimeout(() => {
+            const container = document.querySelector('.container');
+            if (container) {
+                container.scrollTo({
+                    top: container.scrollHeight,   // hasta el fondo
+                    behavior: 'smooth'             // desplazamiento suave
+                });
+            }
+        }, 5000);  // 2000 ms = 2 s
+    });
+</script>
+
 <body>
 
     <div class="container">
@@ -337,7 +359,7 @@
                 importante para este día especial</h3>
             <h1 class="names">Karen <br> & <br> Luis</h1>
             <div class="date-time">
-                <div>Sábado<br>03:00pm</div>
+                <div>Sábado<br>02:00pm</div>
                 <div class="divider"></div>
                 <div class="day">
                     <img src="circulo.webp" alt="Círculo" class="circulo">
@@ -356,7 +378,10 @@
             </div>
             <hr class="dashed">
             <div class="bottom">
-                <h3 class="subtitle2">¡Estamos emocionados de compartir este día tan especial contigo!</h3>
+                <div class="details">
+                    <h3 class="subtitle2">¡Estamos emocionados de compartir este día tan especial contigo!</h3>
+                    <img src="regalo.png" alt="R" width="30" height="30">
+                </div>
             </div>
         </div>
     </div>
@@ -377,14 +402,6 @@
                 invitation.style.display = 'block';
             }, 2500);
         };
-    </script>
-    <script>
-        window.addEventListener('click', function () {
-            const music = document.getElementById('bg-music');
-            if (music.paused) {
-                music.play();
-            }
-        }, { once: true });
     </script>
 
 </body>
